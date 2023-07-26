@@ -18,8 +18,50 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-15">
-                <div>Questo è un testo placeholder</div>
+            <div class="col-12">
+                @foreach ($trains as $train)
+                <ul>
+                    <li> 
+                        Azienda:
+                        {{$train->azienda}}
+                    </li>
+                    <li>
+                        Stazione di partenza:
+                        {{$train->stazione_partenza}}
+                    </li>
+                    <li>
+                        Stazione di arrivo:
+                        {{$train->stazione_arrivo}}
+                    </li>
+                    <li>
+                        Orazio di partenza:
+                        {{$train->orario_partenza}}
+                    </li>
+                    <li>
+                        Orario di arrivo:
+                        {{$train->orario_arrivo}}
+                    </li>
+                    <li>
+                        Codice treno:
+                        {{$train->codice_treno}}
+                    </li>
+                    <li>
+                        Numero di carrozze:
+                        {{$train->numero_carrozze}}
+                    </li>
+                    <li>
+                        Il treno è in orario:
+                        {{ $train->in_orario ? 'si' : 'no' }}
+                    </li>
+                    <li>
+                        Il treno è stato cancellato:
+                        {{ $train->cancellato ? 'si' : 'no' }}
+                    </li>
+
+                </ul>
+                    
+                @endforeach
+                
             </div>
         </div>
     </div>
