@@ -16,6 +16,13 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-15">
+                <div>Questo è un testo placeholder</div>
+            </div>
+        </div>
+    </div>
 
     
 </body>
