@@ -59,12 +59,7 @@
                         {{ $train->cancellato ? 'si' : 'no' }}
                     </li>
                 </ul>
-              
-                    
                 @endforeach
-
-
-
 
                 <div class="col-12">
                     <h2>Dati stationi ferroviarie</h2>
