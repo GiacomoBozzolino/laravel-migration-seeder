@@ -31,8 +31,6 @@ class TrainsTableSeeder extends Seeder
             $train->cancellato=$faker->boolean();
 
             $train->save();
-
-
         }
     }
 }
