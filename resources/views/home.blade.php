@@ -19,6 +19,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <h2>Dati treni</h2>
                 @foreach ($trains as $train)
                 <ul>
                     <li> 
@@ -57,10 +58,41 @@
                         Il treno è stato cancellato:
                         {{ $train->cancellato ? 'si' : 'no' }}
                     </li>
-
                 </ul>
+              
                     
                 @endforeach
+
+
+
+
+                <div class="col-12">
+                    <h2>Dati stationi ferroviarie</h2>
+                    @foreach ($stations as $station)
+                    <ul>
+                        <li>
+                            Nome stazione:
+                            {{$station->name}}
+                        </li>
+                        <li>
+                            Città:
+                            {{$station->city}}
+                        </li>
+                        <li>
+                            Numero binari:
+                            {{$station->n_track}}
+                        </li>
+                        <li>
+                            
+                            {{ $station->baggage_check ? 'Con deposito bagagli' : 'Senza deposito bagali' }}
+                        </li>
+                    </ul>
+
+
+
+                    @endforeach
+                    
+                </div>
                 
             </div>
         </div>
